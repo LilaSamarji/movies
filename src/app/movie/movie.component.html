@@ -1,4 +1,5 @@
 <app-header></app-header>
+<!--MOVIE DESCRIPTION-->
 <div class="movie-container">
   <div class="top">
     <div class="left">
@@ -14,6 +15,7 @@
         <img [src]="movie?.cover" alt="" />
       </div>
     </div>
+    <!--RATE THE MOVIE-->
     <div class="right">
       <div class="title">Rate this movie</div>
       <div class="rating-form">
@@ -41,6 +43,7 @@
     </div>
   </div>
   <div class="bottom">
+    <!---------------REVIEWS-------------->
     <h4 class="title">Reviews</h4>
     <div class="reviews" *ngIf="movie?.reviews?.length > 0">
       <div class="review" *ngFor="let review of movie?.reviews">
@@ -64,6 +67,7 @@
         <div class="review-text"></div>
       </div>
     </div>
+    <!--IF NO REVIEWS GIVEN-->
     <div class="reviews" *ngIf="movie?.reviews?.length === 0">
       <div class="no-reviews">No reviews yet</div>
     </div>

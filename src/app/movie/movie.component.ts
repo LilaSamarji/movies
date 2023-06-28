@@ -35,9 +35,11 @@ export class MovieComponent implements OnInit {
     this.http.get(this.url).subscribe((movies) => {
       this.movies = movies;
       let index = this.movies.findIndex(
+        //to display only the movie selected 
         (movie: { id: string }) => movie.id == this.id
       );
       if (index > -1) {
+        //to display only the movie selected 
         this.movie = this.movies[index];
       }
     });

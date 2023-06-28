@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
         console.log(this.PopularMovies);
       })
   }
-  goToMovie(type:string,id:string) {
+  goToMovie(type:string,id:string) { //type is needed to choose which json file to retrieve data from (trending,theatre..)
    this.router.navigate(['movie',type,id]);
   }
 
